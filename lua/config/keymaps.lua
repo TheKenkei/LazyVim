@@ -25,6 +25,17 @@ end, { desc = "Terminal (cwd)" })
 map("n", "<C-a>", "ggVG", { desc = "Terminal (Root Dir)" })
 map("n", "<leader>dd", LazyVim.ui.bufremove, { desc = "Delete Buffer" })
 
-map("i", "<C-g>", function()
-  return vim.fn["codeium#Accept"]()
-end, { expr = true })
+map("i", "<C-s>", "<cmd>:w<cr><ESC>", { desc = "Save" })
+
+map("i", "<C-h>", "<Left>", { desc = "Left" })
+map("i", "<C-l>", "<Right>", { desc = "Right" })
+map("i", "<C-k>", "<Up>", { desc = "Up" })
+map("i", "<C-j>", "<Down>", { desc = "Down" })
+
+map("i", "<CA-h>", "<C-Left>", { desc = "Left" })
+map("i", "<CA-l>", "<C-Right>", { desc = "Right" })
+map("i", "<CA-k>", "<{>", { desc = "Up" })
+map("i", "<CA-j>", "<}>", { desc = "Down" })
+
+map("i", "<C-e>", "<S-End>", { desc = "End" })
+map("i", "<C-b>", "<S-Home>", { desc = "Begin" })
